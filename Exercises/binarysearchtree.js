@@ -7,7 +7,7 @@ function BinarySearchTree {
 	    value: value,
 	    left: null,
 	    right: null
-	      };
+	};
 	if (this._root === null) {
             this._root = node;
 	} else {
