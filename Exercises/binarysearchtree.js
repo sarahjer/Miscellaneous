@@ -8,11 +8,11 @@ function BinarySearchTree {
 		    left: null,
 		    right: null
 		};
-		if (this._root === null) {
-		    this._root = node;
-		} else {
-		    current = this._root;
-		    while (true) {
+	if (this._root === null) {
+            this._root = node;
+	} else {
+	    current = this._root;
+		while (true) {
 			if (value < current.value) {
 				if (current === null) {
 				    current.left = node;
@@ -30,8 +30,8 @@ function BinarySearchTree {
 			} else {
 			    break;
 			}
-			}
 		}
+	}
 	        },
 	}
 };
