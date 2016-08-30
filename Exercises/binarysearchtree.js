@@ -1,13 +1,13 @@
 function BinarySearchTree {
 	this._root=null;
 	BinarySearchTree.prototype {
-		add: function(value) {
-		var current = this._root;
-                var node = {
-	            value: value,
-		    left: null,
-		    right: null
-		};
+	      add: function(value) {
+	      var current = this._root;
+              var node = {
+	          value: value,
+		  left: null,
+		  right: null
+	      };
 	if (this._root === null) {
             this._root = node;
 	} else {
