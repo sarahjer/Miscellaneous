@@ -1,6 +1,6 @@
-function BinarySearchTree {
+function BinarySearchTree() {
 		this._root=null;
-		BinarySearchTree.prototype {
+		BinarySearchTree.prototype = {
 				add: function(value) {
 						var current = this._root;
 						var node = {
@@ -35,3 +35,4 @@ function BinarySearchTree {
 				},
 		}
 };
+BinarySearchTree ();
