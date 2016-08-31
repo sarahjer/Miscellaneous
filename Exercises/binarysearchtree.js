@@ -31,12 +31,16 @@ BinarySearchTree.prototype = {
 					}
 				} else {
 					break;
+
 				}
 			}
 		}
 	},
+	printRoot: function() {
+		console.log(this._root);
+	},
 }
 
-BinarySearchTree();
-BinarySearchTree.prototype.add(4);
-console.log(node);
+var bt = new BinarySearchTree();
+bt.add(4);
+bt.printRoot();
