@@ -1,5 +1,6 @@
 function BinarySearchTree() {
 	this._root = null;
+}
 	BinarySearchTree.prototype = {
 	  constructor: BinarySearchTree,
 		add: function(value) {
@@ -35,7 +36,7 @@ function BinarySearchTree() {
 			}
 		},
 	}
-};
+
 BinarySearchTree();
 BinarySearchTree.prototype.add(4);
 console.log(node);
