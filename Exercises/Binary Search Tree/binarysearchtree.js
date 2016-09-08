@@ -49,14 +49,31 @@ BinarySearchTree.prototype = {
 			if(node.left != null){
 				this.traverse(node.left);
 			}
-
-
 		}
 		else{
 			console.log("Node is Null");
 		}
 	},
+	search: function (node) {
+		var a = false; root = this._root;
+		while (a != true && root != null) {
+			if (node > root.value) {
+				root = root.right;
+			}
+			else if (node < root.value) {
+				root = root.left;
+			}
+			else {
+				a = true; 
+				console.log("Found");
+			}
+		}	
+		if (a == false) {
+			console.log("Not Found");
+		}
+	}
 }
+
 
 var bt = new BinarySearchTree();
 bt.add(5);
@@ -68,3 +85,5 @@ bt.add(6);
 bt.add(8);
 bt.printRoot();
 bt.traverse(bt._root);
+bt.search(9);
+
