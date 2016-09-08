@@ -13,17 +13,15 @@ var validate = function() {
 		c = c + a;
 	}
 	var firstName = document.getElementById("firstname").value,
-	lastName = document.getElementById("lastname").value;
+		lastName = document.getElementById("lastname").value;
 	if((c % 10) == 0) {
-		if (value[0] == 5)
-		{
-		document.getElementById("Result").innerHTML =
-		"Hello"+ " " + firstName + " " + lastName + " " + " Your Credit Card is Valid & is a Master Card";
-		
+		if (value[0] == 5) {
+			document.getElementById("Result").innerHTML =
+			"Hello"+ " " + firstName + " " + lastName + " " + " Your Credit Card is Valid & is a Master Card";
 		}
-		else if(value[0] == 4 ){
-		document.getElementById("Result").innerHTML =
-		"Hello" + firstName + " " + lastName + "Your Credit Card is Valid & is a Visa Card";
+		else if(value[0] == 4 ) {
+			document.getElementById("Result").innerHTML =
+			"Hello" + firstName + " " + lastName + "Your Credit Card is Valid & is a Visa Card";
 		}
 		else {
 			document.getElementById("Result").innerHTML = "Enter Visa or Master Card Number";
@@ -31,7 +29,6 @@ var validate = function() {
 	}
 	else{
 		document.getElementById("Result").innerHTML =
-				"Hello" + firstName + " " + lastName + "Your Credit Card is Not Valid";
-	}
-	
+		"Hello" + firstName + " " + lastName + "Your Credit Card is Not Valid";
+	}	
 }
