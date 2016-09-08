@@ -1,6 +1,12 @@
 body {
-	background-color: #00aaff;
-	font-family: Brushstroke, fantasy;
-	color: #000000;
+	background-color: #A193B9;
+	font-family: Tahoma, sans-serif;
+	color: #4B386B;
 	text-align: center;
+	font-style: italic, bold;
+	padding-top: 15px;
+}
+
+#firstname #lastname {
+padding-right: 10px;
 }

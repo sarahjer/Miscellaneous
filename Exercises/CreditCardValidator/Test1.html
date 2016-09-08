@@ -4,17 +4,16 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<title>Credit Card Validator</title>
 </head>
-<script type="text/javascript" src="Script.js"></script>
+
 <body>
-
-	First Name: 
-	<input type="text" name="firstname"><br>
-	Last Name:
-	<input type="text" name="lastname"><br>
+	First Name:     
+	<input type="text" name="firstname" id="firstname"><br>
+	Last Name:    
+	<input type="text" name="lastname" id="lastname"><br>
 	Credit Card Number:
-	<input type="number" name="CardNumber" id="CardNumber"><br>
-	<input type="submit" name="Validate" onclick = "validate(CardNumber);">
-
-
+	<input type="number" name="CardNumber" id="CardNumber" maxlength="16"><br>
+	<input type="submit" value="Validate" onclick = "validate(CardNumber);">
+	<div id="Result"></div>
+<script type="text/javascript" src="Script.js"></script>
 </body>
 </html>
