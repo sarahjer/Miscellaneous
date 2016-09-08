@@ -1,6 +1,8 @@
 function BinarySearchTree() {
 	this._root = null;
+	console.log('Object initialzed');
 }
+
 BinarySearchTree.prototype = {
   constructor: BinarySearchTree,
 	add: function(value) {
@@ -31,7 +33,6 @@ BinarySearchTree.prototype = {
 					}
 				} else {
 					break;
-
 				}
 			}
 		}
@@ -39,8 +40,31 @@ BinarySearchTree.prototype = {
 	printRoot: function() {
 		console.log(this._root);
 	},
+	traverse:function (node) {
+		if(node != null){
+			if(node.right !=null){
+				this.traverse(node.right);
+			}
+			console.log(node.value);
+			if(node.left != null){
+				this.traverse(node.left);
+			}
+
+
+		}
+		else{
+			console.log("Node is Null");
+		}
+	},
 }
 
 var bt = new BinarySearchTree();
+bt.add(5);
+bt.add(3);
+bt.add(2);
+bt.add(7);
 bt.add(4);
+bt.add(6);
+bt.add(8);
 bt.printRoot();
+bt.traverse(bt._root);
