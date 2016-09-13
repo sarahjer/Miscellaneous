@@ -5,7 +5,7 @@ function Palindrome() {
 			b = a.toString();
 			if (b == b.split('').reverse().join('')) {
 			c = i + "x" + j;
-			console.log(c);
+			console.log("The largest palindrome made from the product of two 3-digit numbers is " + c);
 			}
 			if (c != undefined) {
 				break;
