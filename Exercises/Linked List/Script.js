@@ -57,9 +57,7 @@ SingleLinkedList.prototype = {
 			next.pointer = node;
 			next1.pointer = next;
 			this.reverse(node.pointer);
-			if (next.pointer === null) {
-				break;
-			}
+			
 		}
 		else { 
 			console.log("No values present");
