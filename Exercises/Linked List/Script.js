@@ -49,7 +49,23 @@ SingleLinkedList.prototype = {
 		if (a == false) {
 		console.log("Not Found");
 		}
-	}
+	},
+	reverse: function(node) {
+		if (node.pointer != null) {
+			var next = node.pointer;
+			var next1 = next.pointer;
+			next.pointer = node;
+			next1.pointer = next;
+			this.reverse(node.pointer);
+			if (next.pointer === null) {
+				break;
+			}
+		}
+		else { 
+			console.log("No values present");
+		}
+	
+	}	
 }
 
 var ll = new SingleLinkedList();
@@ -64,3 +80,4 @@ ll.add(9);
 ll.printRoot();
 ll.traverse(ll._root);
 ll.search(13);
+ll.reverse(ll._root);
