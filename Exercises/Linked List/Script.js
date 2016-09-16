@@ -51,11 +51,23 @@ SingleLinkedList.prototype = {
 		}
 	},
 	reverse: function(node) {
-		if (node.pointer != null) {
-			var next = node.pointer;
+		var next1 = null;
+		while (true) {
+			var next;
+			if(next1 != null){
+				next = next1;
+			} else{
+				next = node.pointer;
+				node.pointer = null;
+			}
+			next1 = next.pointer;
 			next.pointer = node;
-			this._root = next;	
-			node.pointer = null;
+			node = next;
+
+			if (next1 === null) {
+				this._root = node;	
+				break;
+			}
 		}
 	}		
 }
