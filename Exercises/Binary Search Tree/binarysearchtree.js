@@ -1,5 +1,6 @@
 function BinarySearchTree() {
 	this._root = null;
+	
 	console.log('Object initialized');
 }
 ;
@@ -38,7 +39,7 @@ BinarySearchTree.prototype = {
 		}
 	},
 	printRoot: function() {
-		console.log(this._root);
+		console.log("Value of root is: " + this._root.value);
 	},
 	traverse:function (node) {
 		if(node != null){
@@ -73,29 +74,43 @@ BinarySearchTree.prototype = {
 		}
 	},
 	secondLargest: function (node) {
-		while(true){
-			var next = node.right;
-			if (next.right != null) {
+		var largest = node;
+		while (node != null) {
+			var parentNode = node;
+			var rightFlag = false;
+			if (node.right != null) {
 				node = node.right;
-				console.log(node);
-				}
-				else {
-					break;
-				}
+				rightFlag = true;
+			}	
+			else if (node.left != null) {
+				node = node.left;
+			} 
+			else {
+				break;
+			}	
+			if(largest.value < node.value){
+				largest = node;
+			}
+			if(node.right == null && node.left == null && rightFlag) {
+				if(node.value >= largest.value){
+					node = parentNode;
+				} 
+				break;
 			}
 		}
-		
+		console.log(node);
+	}
 }
 
 
 var bt = new BinarySearchTree();
+
+bt.add(10);
 bt.add(5);
-bt.add(3);
-bt.add(2);
-bt.add(8);
-bt.add(4);
-bt.add(6);
-bt.add(9);
+bt.add(15);
+bt.add(12);
+bt.add(17);
+bt.add(16);
 bt.printRoot();
 bt.traverse(bt._root);
 bt.search(9);
