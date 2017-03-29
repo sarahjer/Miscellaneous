@@ -1,9 +1,9 @@
 function BinarySearchTree() {
 	this._root = null;
-	
 	console.log('Object initialized');
 }
-;
+	var length = 0;
+	var l = 0;
 BinarySearchTree.prototype = {
   constructor: BinarySearchTree,
 	add: function(value) {
@@ -98,7 +98,21 @@ BinarySearchTree.prototype = {
 				break;
 			}
 		}
-		console.log(node);
+		console.log(node.value);
+	},
+	findHeight: function(node){
+		if(node != null){
+			if(node.right !=null){
+				length++;
+				this.findHeight(node.right);
+			}
+			if(node.left != null){
+				l++;
+				this.findHeight(node.left);
+			}
+		}
+		return length > l ? length: l;
+		
 	}
 }
 
@@ -112,6 +126,7 @@ bt.add(12);
 bt.add(17);
 bt.add(16);
 bt.printRoot();
-bt.traverse(bt._root);
+console.log(bt.traverse(bt._root));
 bt.search(9);
 bt.secondLargest(bt._root);
+console.log(bt.findHeight(bt._root));
